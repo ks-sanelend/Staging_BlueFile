@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[st_imageData] (
+    [taskInstanceUuid]          VARCHAR (100) NULL,
+    [domain]                    VARCHAR (8)   NULL,
+    [imageUuid]                 VARCHAR (100) NULL,
+    [batch]                     VARCHAR (100) NULL,
+    [reference]                 VARCHAR (100) NULL,
+    [keyCustomer]               INT           NULL,
+    [appointmentTypeUuid]       VARCHAR (100) NULL,
+    [keyscheduleType]           INT           NULL,
+    [keyappointmentDate]        INT           NULL,
+    [keystartTime]              INT           NULL,
+    [keyendTime]                INT           NULL,
+    [companyUserUuid]           VARCHAR (100) NULL,
+    [customerLocationUuid]      VARCHAR (100) NULL,
+    [customerAccountUuid]       VARCHAR (100) NULL,
+    [tradeChannelUuid]          VARCHAR (100) NULL,
+    [principalUuid]             VARCHAR (100) NULL,
+    [serviceProviderUuid]       VARCHAR (100) NULL,
+    [salesAgencyCostCentreUuid] VARCHAR (100) NULL,
+    [keytaskStatus]             INT           NULL,
+    [keycompletedDate]          INT           NULL,
+    [keycompletedTime]          INT           NULL,
+    [taskTypeUuid]              VARCHAR (100) NULL,
+    [keyproductCategory]        INT           NOT NULL,
+    [uri]                       VARCHAR (500) NULL,
+    [loadDate]                  DATETIME      NULL
+);
+

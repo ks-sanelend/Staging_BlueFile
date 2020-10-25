@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ITDYNAMICS\adm.domw]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

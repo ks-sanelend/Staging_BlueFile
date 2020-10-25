@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ITDYNAMICS\tamsynsc]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

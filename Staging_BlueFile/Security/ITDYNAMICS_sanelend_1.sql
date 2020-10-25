@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ITDYNAMICS\sanelend]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

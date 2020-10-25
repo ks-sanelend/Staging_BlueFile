@@ -1,0 +1,2 @@
+﻿CREATE USER [ITDYNAMICS\it-backup] FOR LOGIN [ITDYNAMICS\it-backup];
+

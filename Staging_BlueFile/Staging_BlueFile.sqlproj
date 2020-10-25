@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Staging_BlueFile</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f4b629cf-7766-4836-8514-ab8768cedb69}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql140DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Staging_BlueFile</RootNamespace>
+    <AssemblyName>Staging_BlueFile</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\st_imageData.sql" />
+    <Build Include="dbo\Tables\appointmentTypes.sql" />
+    <Build Include="dbo\Tables\company.sql" />
+    <Build Include="dbo\Tables\companyUser.sql" />
+    <Build Include="dbo\Tables\customerAccount.sql" />
+    <Build Include="dbo\Tables\customerLocation.sql" />
+    <Build Include="dbo\Tables\imageData.sql" />
+    <Build Include="dbo\Tables\umt_BF_PrincipalDomain.sql" />
+    <Build Include="dbo\Tables\operationsLog.sql" />
+    <Build Include="dbo\Tables\pdFData.sql" />
+    <Build Include="dbo\Tables\rabbitmqMessageLog.sql" />
+    <Build Include="dbo\Tables\salesAgencyCostCentre.sql" />
+    <Build Include="dbo\Tables\st_appointmentTypes.sql" />
+    <Build Include="dbo\Tables\st_company.sql" />
+    <Build Include="dbo\Tables\st_companyUser.sql" />
+    <Build Include="dbo\Tables\st_customerAccount.sql" />
+    <Build Include="dbo\Tables\st_customerLocation.sql" />
+    <Build Include="dbo\Tables\st_salesAgencyCostCentre.sql" />
+    <Build Include="dbo\Tables\st_taskTracker.sql" />
+    <Build Include="dbo\Tables\st_taskTypes.sql" />
+    <Build Include="dbo\Tables\taskTracker.sql" />
+    <Build Include="dbo\Tables\taskTypes.sql" />
+    <Build Include="dbo\Tables\tradeChannelNodes.sql" />
+    <Build Include="dbo\Tables\st_merchandisingSurvey.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\st_priceSurvey.sql" />
+    <Build Include="dbo\Tables\umt_priceSurvey_Fix.sql" />
+    <Build Include="dbo\Tables\st_priceSurveyFailedRecords.sql" />
+    <Build Include="Security\ITDYNAMICS_adm.domw.sql" />
+    <Build Include="Security\ITDYNAMICS_adm_1.domw.sql" />
+    <Build Include="Security\ITDYNAMICS_sanelend.sql" />
+    <Build Include="Security\ITDYNAMICS_sanelend_1.sql" />
+    <Build Include="Security\ITDYNAMICS_it-backup.sql" />
+    <Build Include="Security\ITDYNAMICS_it-backup_1.sql" />
+    <Build Include="Security\ITDYNAMICS_tamsynsc.sql" />
+    <Build Include="Security\ITDYNAMICS_tamsynsc_1.sql" />
+    <Build Include="Security\ITDYNAMICS_CaressaN.sql" />
+    <Build Include="Security\ITDYNAMICS_CaressaN_1.sql" />
+    <Build Include="Security\ITDYNAMICS_DomW.sql" />
+    <Build Include="Security\ITDYNAMICS_DomW_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\qfn_JsonEscape.sql" />
+    <Build Include="dbo\Functions\qfn_XmlToJson.sql" />
+    <Build Include="dbo\Stored Procedures\usp_imageData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_priceSurvey.sql" />
+    <Build Include="dbo\Stored Procedures\usp_merchandisingSurveyData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_appointmentTypes.sql" />
+    <Build Include="dbo\Stored Procedures\usp_priceSurveyData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_company.sql" />
+    <Build Include="dbo\Stored Procedures\usp_companyUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_customerAccount.sql" />
+    <Build Include="dbo\Stored Procedures\usp_customerLocation.sql" />
+    <Build Include="dbo\Stored Procedures\usp_priceSurveyProdCategory.sql" />
+    <Build Include="dbo\Stored Procedures\usp_masterData_Queue.sql" />
+    <Build Include="dbo\Stored Procedures\usp_rabbitmqMessageQueueErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_salesAgencyCostCentre.sql" />
+    <Build Include="dbo\Stored Procedures\usp_taskTracker.sql" />
+    <Build Include="dbo\Stored Procedures\usp_taskTypes.sql" />
+    <Build Include="dbo\Stored Procedures\usp_purgeLogData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_updateKeyCustomer.sql" />
+    <Build Include="dbo\Stored Procedures\usp_analyticsEvent_Queue.sql" />
+    <Build Include="dbo\Stored Procedures\usp_updateDomain.sql" />
+  </ItemGroup>
+</Project>

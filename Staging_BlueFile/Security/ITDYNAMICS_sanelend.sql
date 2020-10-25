@@ -1,0 +1,2 @@
+﻿CREATE USER [ITDYNAMICS\sanelend] FOR LOGIN [ITDYNAMICS\sanelend];
+

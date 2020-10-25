@@ -1,0 +1,2 @@
+﻿CREATE USER [ITDYNAMICS\adm.domw] FOR LOGIN [ITDYNAMICS\adm.domw];
+
